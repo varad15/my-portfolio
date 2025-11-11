@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Project Details - Varad Jumbad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project details for Varad Jumbad's portfolio" />
+  <meta name="author" content="Varad Jumbad" />
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script src="js/modernizr-2.6.2.min.js"></script>
+  <style>
+    /* --- NEW TECH/DARK THEME STYLES --- */
+
+    /* GLOBAL STYLES */
+    body {
+        /* Dark, tech-savvy gradient background */
+        background: linear-gradient(135deg, #111827 0%, #1a2035 100%);
+        font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+        font-size: 1.125rem; /* Base font size (18px) */
+        color: #ffffff; /* PURE WHITE for max contrast */
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    a {
+        color: #22d3ee; /* Vibrant cyan accent */
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    /* Remove default bg from template */
+    #colorlib-page {
+        background: transparent;
+    }
+    .colorlib-logo span, .colorlib-logo {
+        color: #ffffff !important;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+    }
+
+    /* DARK NAV MENU (OVERRIDE) */
+    #colorlib-main-nav {
+        background: rgba(17, 24, 39, 0.98); /* Dark, slightly transparent */
+    }
+    /* Hide search bar and other widgets */
+    #colorlib-main-nav .form-group,
+    #colorlib-main-nav .head-title,
+    #colorlib-main-nav .gallery {
+        display: none;
+    }
+    #colorlib-main-nav ul li a {
+        color: #ffffff; /* PURE WHITE */
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+    #colorlib-main-nav ul li a:hover {
+        color: #22d3ee; /* Cyan hover */
+    }
+    #colorlib-main-nav ul li.active a {
+        color: #22d3ee;
+    }
+    .colorlib-nav-toggle {
+        color: #fff;
+    }
+    .colorlib-nav-toggle i::before, .colorlib-nav-toggle i::after {
+        background: #fff;
+    }
+    .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
+        background: #22d3ee;
+    }
+
+    /* SECTION HEADINGS (Minimalist Line Style) */
+    .row.text-center h2.bold {
+        font-family: 'Inter', sans-serif;
+        font-size: 3.2rem;
+        font-weight: 900;
+        margin: 0 auto 60px auto; /* Center and add margin */
+        padding: 0 18px 15px 18px; /* Padding for line */
+        letter-spacing: -1.5px;
+        transition: color 0.22s, transform 0.22s;
+        cursor: pointer;
+        color: #ffffff !important;
+        display: inline-block; /* Allow line to be only as wide as text */
+        position: relative;
+        text-align: center;
+        will-change: color, transform;
+    }
+    .row.text-center h2.bold:hover {
+        color: #22d3ee !important; /* Cyan accent on hover */
+        transform: scale(1.05); /* Keep a subtle hover effect */
+    }
+    /* The new gradient line */
+    .row.text-center h2.bold::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 60%; /* Line is 60% of the text width */
+        height: 4px;
+        background: linear-gradient(90deg, #22d3ee 0%, #06b6d4 100%);
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+    .row.text-center h2.bold:hover::after {
+        width: 100%; /* Line expands on hover */
+    }
+
+    /* General Heading Overrides (for muted bg text) */
+    .rotate h2.heading {
+        color: rgba(255,255,255,0.05) !important; /* Muted bg text */
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+    }
+
+    /* PROJECT CONTENT AREA */
+    #colorlib-work {
+        background: transparent;
+        padding-top: 80px;
+    }
+    .intro-heading span { /* "Portfolio" */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #22d3ee;
+        font-size: 0.9rem;
+    }
+    .intro-heading h2 { /* "Project Details" */
+        font-family: 'Inter', sans-serif;
+        font-size: 2.8rem;
+        color: #ffffff !important;
+        margin-bottom: 15px;
+        font-weight: 900;
+    }
+
+    .work-entry {
+        background: #1F2937;
+        border-radius: 16px;
+        border: 1px solid #374151;
+        box-shadow: 0 6px 23px 0 rgba(0,0,0,0.3);
+        margin-bottom: 40px;
+        overflow: hidden; /* Ensure rounded corners */
+    }
+    .work-entry .work-img {
+        border-bottom: 1px solid #374151;
+    }
+
+    .work-entry .desc {
+        padding: 40px 50px; /* More padding */
+    }
+    .work-entry .desc h2 { /* Project Title */
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .work-entry .desc p {
+        color: #ffffff;
+        font-size: 1.25rem; /* Larger text */
+        line-height: 1.8;
+    }
+    .work-entry .desc .img-responsive {
+        border-radius: 12px;
+        border: 1px solid #374151;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /* Tech/Code highlighting */
+    .work-entry .desc p strong {
+        font-family: 'Fira Code', monospace;
+        color: #22d3ee;
+        background: rgba(34, 211, 238, 0.1);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    .work-entry .desc p.read a {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        color: #111827; /* Dark text */
+        background: #22d3ee; /* Cyan button */
+        padding: 12px 25px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    .work-entry .desc p.read a:hover {
+        background: #ffffff;
+        color: #111827;
+        transform: scale(1.05);
+    }
+
+    /* DARK FOOTER */
+    footer {
+        position: relative;
+        z-index: 10;
+    }
+    #footer {
+        background: #111827; /* Match darkest page color */
+        padding: 70px 0 50px 0;
+        color: #9ca3af; /* Muted light text */
+        border-top: 1px solid #374151; /* Separator */
+    }
+    #footer h2 {
+        font-family: 'Inter', sans-serif;
+        color: #fff !important;
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    #footer p {
+        color: #b0b9c6; /* Brighter text */
+        font-size: 1.1rem; /* Increased font size */
+    }
+    #footer a {
+        color: #22d3ee;
+    }
+    #footer a:hover {
+        color: #fff;
+    }
+    #footer .colorlib-social-icons a {
+        font-size: 1.15rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 12px;
+        color: #ffffff; /* PURE WHITE */
+        transition: all 0.3s ease;
+    }
+    #footer .colorlib-social-icons a:hover {
+        color: #22d3ee;
+        transform: translateX(5px);
+    }
+    #footer .colorlib-social-icons a i {
+        margin-right: 14px;
+        font-size: 1.3rem;
+        width: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        color: #22d3ee; /* Cyan icons */
+    }
+    #footer .text-center p,
+    #footer .text-center p a {
+        color: #6b7280; /* Very muted for copyright */
+        font-size: 0.95rem;
+    }
+    #footer .text-center p a:hover {
+        color: #22d3ee;
+    }
+    #footer .text-center p i {
+        color: #ffbd59; /* Keep yellow heart */
+    }
+
+    /* Hide old footer content */
+    #footer .col-md-4.col-pb-sm {
+        display: none;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<nav id="colorlib-main-nav" role="navigation">
+  <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+  <div class="js-fullheight colorlib-table">
+    <div class="colorlib-table-cell js-fullheight">
+      <div class="row">
+        <div class="col-md-12">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="colorlib-page">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="colorlib-navbar-brand">
+            <a class="colorlib-logo" href="index.html"><span>Varad</span></a>
+          </div>
+          <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="colorlib-work">
+    <div class="container">
+      <div class="row text-center">
+        <h2 class="bold">Projects</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+          <span>Portfolio</span>
+          <h2>Project Details</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="rotate">
+            <h2 class="heading">Portfolio</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="work-entry animate-box">
+            <a href="#" class="work-img" style="background-image: url(images/work-2.jpg);">
+            </a>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="desc">
+                <h2>FinVault – Secure Role-Based Online Banking Simulator</h2>
+
+                <p>Developed a full-stack banking platform with login, account creation, transaction tracking, and secure authentication. The system enforces role-based access control (RBAC) for different user types (e.g., customer, admin).</p>
+                <p>The core of this project was building a robust and reliable backend, focusing on <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>MySQL</strong>, and <strong>JWT</strong> for secure session handling. I placed a strong emphasis on proper data validation to prevent common vulnerabilities and ensure data integrity within the normalized relational database.</p>
+
+
+                <p>This project was a deep dive into full-stack application design, from the database schema to the REST API endpoints and the secure authentication flow. It solidified my understanding of how to build reliable, stateful applications using modern Java frameworks.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-pb-sm">
+            <h2>Let's Connect</h2>
+            <p>Feel free to reach out for collaboration, projects, or conversations.</p>
+            <p><strong>Email:</strong> <a href="mailto:varadjumbad15@gmail.com">varadjumbad15@gmail.com</a></p>
+          </div>
+          <div class="col-md-6 col-pb-sm">
+            <h2>Profiles</h2>
+            <p class="colorlib-social-icons">
+              <a href="https://linkedin.com/in/varad-jumbad-a02b57256" target="_blank"><i class="icon-linkedin2"></i> LinkedIn</a><br>
+              <a href="https://github.com/varad15" target="_blank"><i class="icon-github"></i> GitHub</a><br>
+              <a href="https://leetcode.com/u/varadjumbad15/" target="_blank"><i class="icon-code"></i> LeetCode</a><br>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+              &copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart4" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

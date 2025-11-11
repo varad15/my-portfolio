@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Project Details - Varad Jumbad</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Project details for Varad Jumbad's portfolio" />
+	<meta name="author" content="Varad Jumbad" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<style>
+    /* --- NEW TECH/DARK THEME STYLES --- */
+
+    /* GLOBAL STYLES */
+    body {
+        /* Dark, tech-savvy gradient background */
+        background: linear-gradient(135deg, #111827 0%, #1a2035 100%);
+        font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+        font-size: 1.125rem; /* Base font size (18px) */
+        color: #ffffff; /* PURE WHITE for max contrast */
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    a {
+        color: #22d3ee; /* Vibrant cyan accent */
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    /* Remove default bg from template */
+    #colorlib-page {
+        background: transparent;
+    }
+    .colorlib-logo span, .colorlib-logo {
+        color: #ffffff !important;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+    }
+
+    /* DARK NAV MENU (OVERRIDE) */
+    #colorlib-main-nav {
+        background: rgba(17, 24, 39, 0.98); /* Dark, slightly transparent */
+    }
+    /* Hide search bar and other widgets */
+    #colorlib-main-nav .form-group,
+    #colorlib-main-nav .row-padded-bottom,
+    #colorlib-main-nav .head-title,
+    #colorlib-main-nav .gallery {
+        display: none;
+    }
+    #colorlib-main-nav ul li a {
+        color: #ffffff; /* PURE WHITE */
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+    #colorlib-main-nav ul li a:hover {
+        color: #22d3ee; /* Cyan hover */
+    }
+    #colorlib-main-nav ul li.active a {
+        color: #22d3ee;
+    }
+    .colorlib-nav-toggle {
+        color: #fff;
+    }
+    .colorlib-nav-toggle i::before, .colorlib-nav-toggle i::after {
+        background: #fff;
+    }
+    .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
+        background: #22d3ee;
+    }
+
+    /* PROJECT HEADER */
+    #colorlib-featured-flex {
+        background: #111827; /* Dark bg */
+    }
+    #colorlib-featured-flex .text-inner .desc h1 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        color: #ffffff;
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+    #colorlib-featured-flex .text-inner .desc h2 {
+        font-family: 'Fira Code', monospace; /* Tech font for subtitle */
+        font-size: 1.2rem;
+        color: #22d3ee; /* Cyan accent */
+    }
+    #colorlib-featured-flex .text-inner .desc h2 a {
+        color: #ffbd59; /* Yellow for links */
+    }
+
+    /* BLOG/CONTENT AREA */
+    #colorlib-blog {
+        background: transparent; /* Let body bg show */
+        padding: 80px 0;
+    }
+    .blog-entry {
+        background: #1F2937;
+        border: 1px solid #374151;
+        border-radius: 16px;
+        padding: 30px;
+    }
+    .blog-entry .desc h3 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 1.8rem;
+    }
+    .blog-entry .desc span {
+        color: #9ca3af; /* Muted grey */
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9rem;
+    }
+    .blog-entry .desc p {
+        color: #ffffff;
+        font-size: 1.25rem; /* Larger text */
+    }
+    /* Big Drop Cap */
+    .blog-entry .desc p.first-letra:first-letter {
+        font-size: 5em;
+        line-height: 1;
+        font-weight: 900;
+        color: #22d3ee;
+        float: left;
+        margin-right: 15px;
+        padding-top: 10px;
+    }
+    /* Tech/Code highlighting */
+    .blog-entry .desc p strong {
+        font-family: 'Fira Code', monospace;
+        color: #22d3ee;
+        background: rgba(34, 211, 238, 0.1);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+    /* Blockquote style */
+    .blog-entry .desc blockquote {
+        background: #111827;
+        border-left: 5px solid #22d3ee;
+        padding: 20px 30px;
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+    /* Gallery images */
+    .gallery-post .gallery-img {
+        border-radius: 8px;
+        border: 1px solid #374151;
+        margin-bottom: 20px;
+    }
+    /* Lists */
+    .blog-entry .desc ul,
+    .blog-entry .desc ol {
+        padding-left: 25px;
+        margin-bottom: 20px;
+    }
+    .blog-entry .desc ul li,
+    .blog-entry .desc ol li {
+        color: #ffffff;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .blog-entry .desc ul li::marker {
+        color: #22d3ee;
+        font-size: 1.5em;
+    }
+
+    /* Project Navigation */
+    .nav-next-prev {
+        display: block;
+        background: #1F2937;
+        border: 1px solid #374151;
+        border-radius: 12px;
+        padding: 20px 25px;
+        transition: all 0.3s ease;
+    }
+    .nav-next-prev:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 25px 0 rgba(34, 211, 238, 0.3);
+        border-color: #22d3ee;
+    }
+    .nav-next-prev span {
+        font-family: 'Fira Code', monospace;
+        color: #22d3ee;
+        font-size: 0.9rem;
+    }
+    .nav-next-prev h2 {
+        font-family: 'Inter', sans-serif;
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin: 5px 0 0 0;
+    }
+
+    /* HIDE Author, Comments, Instagram */
+    .author.text-center,
+    .comment-box,
+    .comment-area,
+    #colorlib-instagram {
+        display: none;
+    }
+
+    /* DARK FOOTER */
+    footer {
+        position: relative;
+        z-index: 10;
+    }
+    #footer {
+        background: #111827; /* Match darkest page color */
+        padding: 70px 0 50px 0;
+        color: #9ca3af; /* Muted light text */
+        border-top: 1px solid #374151; /* Separator */
+    }
+    #footer h2 {
+        font-family: 'Inter', sans-serif;
+        color: #fff !important;
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    #footer p {
+        color: #b0b9c6; /* Brighter text */
+        font-size: 1.1rem; /* Increased font size */
+    }
+    #footer a {
+        color: #22d3ee;
+    }
+    #footer a:hover {
+        color: #fff;
+    }
+    #footer .colorlib-social-icons a {
+        font-size: 1.15rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 12px;
+        color: #ffffff; /* PURE WHITE */
+        transition: all 0.3s ease;
+    }
+    #footer .colorlib-social-icons a:hover {
+        color: #22d3ee;
+        transform: translateX(5px);
+    }
+    #footer .colorlib-social-icons a i {
+        margin-right: 14px;
+        font-size: 1.3rem;
+        width: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        color: #22d3ee; /* Cyan icons */
+    }
+    #footer .text-center p,
+    #footer .text-center p a {
+        color: #6b7280; /* Very muted for copyright */
+        font-size: 0.95rem;
+    }
+    #footer .text-center p a:hover {
+        color: #22d3ee;
+    }
+    #footer .text-center p i {
+        color: #ffbd59; /* Keep yellow heart */
+    }
+
+    </style>
+
+</head>
+<body>
+
+<nav id="colorlib-main-nav" role="navigation">
+	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+	<div class="js-fullheight colorlib-table">
+		<div class="colorlib-table-cell js-fullheight">
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a href="work.html">Work</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div id="colorlib-page">
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="colorlib-navbar-brand">
+						<a class="colorlib-logo" href="index.html"><span>Varad</span></a>
+					</div>
+					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="colorlib-featured-flex">
+		<div class="one-forth">
+			<div class="text-inner">
+				<div class="desc">
+					<h1>Pune Municipal Corporation – Complaint Data Analysis</h1>
+					<h2><strong>Role:</strong> Project Lead | <strong>Tech:</strong> Data Analysis, ML</h2>
+				</div>
+			</div>
+		</div>
+		<div class="three-forth">
+			<div class="intro-img" style="background-image:url(images/work-1.jpg);"></div>
+		</div>
+	</div>
+	<div id="colorlib-blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="blog-entry animate-box col-pb-sm">
+						<div class="desc">
+							<h3>Project Overview</h3>
+
+							<p class="first-letra">Analyzed <strong><a href="#">multi-year civic complaint data</a></strong> for the Pune Municipal Corporation to uncover trends, inefficiencies, and escalation patterns. The primary goal was to move from a reactive to a predictive system for handling citizen complaints. Our analysis identified key bottlenecks in the existing workflow.</p>
+
+							<blockquote>
+								The core objective was to propose an ML-driven workflow for automatic complaint categorization and routing, aiming to significantly improve response efficiency and citizen satisfaction.
+							</blockquote>
+
+							<p><strong>Technical Approach</strong><br>
+								The initial phase involved extensive data cleaning and preprocessing of unstructured text data from thousands of complaints. We utilized <strong>Natural Language Processing (NLP)</strong> techniques to extract features and classify complaint types. The proposed system was designed around a <strong>YOLOv8</strong> model (for image-based complaints like potholes) and a <strong>BERT-based</strong> text classifier.</p>
+
+							<div class="gallery-post">
+								<div class="gallery-img" style="background-image: url(images/img-2.jpg);">
+								</div>
+								<div class="gallery-img" style="background-image: url(images/img-3.jpg);">
+								</div>
+								<div class="gallery-img" style="background-image: url(images/img-4.jpg);">
+								</div>
+								<div class="gallery-img" style="background-image: url(images/img-5.jpg);">
+								</div>
+							</div>
+
+							<h3>Key Responsibilities</h3>
+							<ul>
+								<li>Led the project team, coordinating tasks and timelines.</li>
+								<li>Performed in-depth data analysis and visualization to identify trends.</li>
+								<li>Developed and trained the ML models for classification and routing.</li>
+								<li>Authored the final report and presented findings to stakeholders.</li>
+							</ul>
+
+							<br>
+							<p class="tags" style="display:none;">
+							</p>
+
+							<div class="row">
+								<div class="col-md-6 text-left">
+									<a href="work-single.html" class="nav-next-prev"> <span><i class="icon-arrow-left3"></i> Previous</span>
+										<h2>FireSentinel – YOLOv8 System</h2>
+									</a>
+								</div>
+								<div class="col-md-6 text-right">
+									<a href="work-single.html" class="nav-next-prev"> <span>Next <i class="icon-arrow-right3"></i></span>
+										<h2>FinVault – Banking Simulator</h2>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 col-pb-sm">
+						<h2>Let's Connect</h2>
+						<p>Feel free to reach out for collaboration, projects, or conversations.</p>
+						<p><strong>Email:</strong> <a href="mailto:varadjumbad15@gmail.com">varadjumbad15@gmail.com</a></p>
+					</div>
+
+					<div class="col-md-6 col-pb-sm">
+						<h2>Profiles</h2>
+						<p class="colorlib-social-icons">
+							<a href="https://linkedin.com/in/varad-jumbad-a02b57256" target="_blank"><i class="icon-linkedin2"></i> LinkedIn</a><br>
+							<a href="https://github.com/varad15" target="_blank"><i class="icon-github"></i> GitHub</a><br>
+							<a href="https://leetcode.com/u/varadjumbad15/" target="_blank"><i class="icon-code"></i> LeetCode</a><br>
+
+						</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>
+						&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart4" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

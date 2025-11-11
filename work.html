@@ -1,0 +1,496 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Work - Varad Jumbad</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Varad Jumbad's Portfolio" />
+	<meta name="author" content="Varad Jumbad" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<style>
+    /* --- NEW TECH/DARK THEME STYLES --- */
+
+    /* GLOBAL STYLES */
+    body {
+        /* Dark, tech-savvy gradient background */
+        background: linear-gradient(135deg, #111827 0%, #1a2035 100%);
+        font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+        font-size: 1.125rem; /* Increased base font size (18px) */
+        color: #ffffff; /* PURE WHITE for max contrast */
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    a {
+        color: #22d3ee; /* Vibrant cyan accent */
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    /* Remove default bg from template */
+    #colorlib-page {
+        background: transparent;
+    }
+    .colorlib-logo span {
+        color: #ffffff !important;
+    }
+
+    /* SECTION HEADINGS (Minimalist Line Style) */
+    .row.text-center h2.bold {
+        font-family: 'Inter', sans-serif;
+        font-size: 3.2rem;
+        font-weight: 900;
+        margin: 0 auto 60px auto; /* Center and add margin */
+        padding: 0 18px 15px 18px; /* Padding for line */
+        letter-spacing: -1.5px;
+        transition: color 0.22s, transform 0.22s;
+        cursor: pointer;
+        color: #ffffff !important;
+        display: inline-block; /* Allow line to be only as wide as text */
+        position: relative;
+        text-align: center;
+        will-change: color, transform;
+    }
+    .row.text-center h2.bold:hover {
+        color: #22d3ee !important; /* Cyan accent on hover */
+        transform: scale(1.05); /* Keep a subtle hover effect */
+    }
+    /* The new gradient line */
+    .row.text-center h2.bold::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 60%; /* Line is 60% of the text width */
+        height: 4px;
+        background: linear-gradient(90deg, #22d3ee 0%, #06b6d4 100%);
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+    .row.text-center h2.bold:hover::after {
+        width: 100%; /* Line expands on hover */
+    }
+
+    /* General Heading Overrides (for muted bg text) */
+    .rotate h2.heading {
+        color: rgba(255,255,255,0.05) !important; /* Muted bg text */
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+    }
+
+
+    /* PROJECTS/WORKS SECTION */
+    #colorlib-work {
+        background: transparent;
+        padding-top: 80px;
+    }
+    .intro-heading span { /* "Portfolio" */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #22d3ee;
+        font-size: 0.9rem;
+    }
+    .intro-heading h2 { /* "Done Projects" */
+        font-family: 'Inter', sans-serif;
+        font-size: 2.8rem;
+        color: #ffffff !important;
+        margin-bottom: 15px;
+        font-weight: 900;
+    }
+    .work-entry {
+        background: #1F2937;
+        border-radius: 16px;
+        border: 1px solid #374151;
+        box-shadow: 0 6px 23px 0 rgba(0,0,0,0.3);
+        margin-bottom: 40px;
+        transition: transform .25s, box-shadow .23s, border-color .23s;
+        overflow: hidden; /* Ensure rounded corners */
+        will-change: transform, box-shadow;
+    }
+    .work-entry:hover {
+        transform: scale(1.02) translateY(-8px);
+        box-shadow: 0 0 25px 0 rgba(34, 211, 238, 0.3); /* Cyan glow */
+        border-color: #22d3ee;
+    }
+    .work-entry .work-img {
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    .work-entry:hover .work-img {
+        opacity: 1;
+    }
+
+    .work-entry a.work-img:hover .display-t {
+        background: transparent; /* No overlay */
+        opacity: 1;
+    }
+
+    /* MODIFIED: Project Title */
+    .work-entry .work-name h2 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 900; /* BOLD */
+        color: #111827 !important; /* BLACK TEXT */
+        font-size: 2.0rem; /* Adjusted size for label */
+        text-shadow: none; /* Removed shadow */
+        background: rgba(255, 255, 255, 0.95); /* LIGHT BACKGROUND */
+        padding: 10px 20px;
+        border-radius: 8px; /* Rounded label */
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    /* Added hover effect for the label */
+    .work-entry:hover .work-name h2 {
+         background: rgba(255, 255, 255, 1); /* Opaque white on hover */
+         color: #000000 !important;
+         transform: scale(1.03);
+    }
+
+    .work-entry .desc {
+        padding: 20px 0 30px 0; /* Add padding to desc */
+    }
+    .work-entry .desc p {
+        color: #ffffff; /* PURE WHITE */
+        font-size: 1.25rem; /* FONT SIZE INCREASED */
+    }
+    /* The "Tech:" line */
+    .work-entry .desc p strong {
+        font-family: 'Fira Code', monospace; /* Monospace for tech! */
+        color: #22d3ee;
+        font-weight: 500;
+        background-color: rgba(34, 211, 238, 0.1);
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+    }
+    .work-entry .desc p.read a {
+        color: #ffbd59; /* Secondary accent for links */
+        font-weight: 700;
+    }
+    .work-entry .desc p.read a:hover {
+        color: #ffffff;
+    }
+
+    /* DARK FOOTER */
+    footer {
+        position: relative;
+        z-index: 10;
+    }
+    #footer {
+        background: #111827; /* Match darkest page color */
+        padding: 70px 0 50px 0;
+        color: #9ca3af; /* Muted light text */
+        border-top: 1px solid #374151; /* Separator */
+    }
+    #footer h2 {
+        font-family: 'Inter', sans-serif;
+        color: #fff !important;
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    #footer p {
+        color: #b0b9c6; /* Brighter text */
+        font-size: 1.1rem; /* Increased font size */
+    }
+    #footer a {
+        color: #22d3ee;
+    }
+    #footer a:hover {
+        color: #fff;
+    }
+    #footer .colorlib-social-icons a {
+        font-size: 1.15rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 12px;
+        color: #ffffff; /* PURE WHITE */
+        transition: all 0.3s ease;
+    }
+    #footer .colorlib-social-icons a:hover {
+        color: #22d3ee;
+        transform: translateX(5px);
+    }
+    #footer .colorlib-social-icons a i {
+        margin-right: 14px;
+        font-size: 1.3rem;
+        width: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        color: #22d3ee; /* Cyan icons */
+    }
+    #footer .row {
+        margin-bottom: 30px;
+    }
+    #footer .text-center p,
+    #footer .text-center p a {
+        color: #6b7280; /* Very muted for copyright */
+        font-size: 0.95rem;
+    }
+    #footer .text-center p a:hover {
+        color: #22d3ee;
+    }
+    #footer .text-center p i {
+        color: #ffbd59; /* Keep yellow heart */
+    }
+
+    /* DARK NAV MENU (OVERRIDE) */
+    #colorlib-main-nav {
+        background: rgba(17, 24, 39, 0.98); /* Dark, slightly transparent */
+    }
+    /* Hide search bar */
+    #colorlib-main-nav .form-group {
+        display: none;
+    }
+    #colorlib-main-nav ul li a {
+        color: #ffffff; /* PURE WHITE */
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+    #colorlib-main-nav ul li a:hover {
+        color: #22d3ee; /* Cyan hover */
+    }
+    #colorlib-main-nav ul li.active a {
+        color: #22d3ee;
+    }
+    .colorlib-nav-toggle {
+        color: #fff;
+    }
+    .colorlib-nav-toggle i::before, .colorlib-nav-toggle i::after {
+        background: #fff;
+    }
+    .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
+        background: #22d3ee;
+    }
+    /* Hide gallery title and images in nav */
+    #colorlib-main-nav .head-title,
+    #colorlib-main-nav .gallery {
+        display: none;
+    }
+
+
+    /* RESPONSIVE IMPROVEMENTS */
+    @media (max-width: 600px) {
+        body { font-size: 1.05rem; } /* Increased mobile base font */
+        .row.text-center h2.bold {
+            font-size: 2rem !important;
+        }
+        .intro-heading h2 {
+            font-size: 2.2rem;
+        }
+        .work-entry .desc p strong {
+            font-size: 0.9rem;
+        }
+        footer .col-md-6 {
+            margin-bottom: 30px;
+        }
+    }
+    </style>
+
+</head>
+<body>
+
+<nav id="colorlib-main-nav" role="navigation">
+	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+	<div class="js-fullheight colorlib-table">
+		<div class="colorlib-table-cell js-fullheight">
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a href="work.html">Work</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div id="colorlib-page">
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="colorlib-navbar-brand">
+						<a class="colorlib-logo" href="index.html"><span>Varad</span></a>
+					</div>
+					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="colorlib-work">
+		<div class="container">
+			<div class="row text-center">
+				<h2 class="bold">Works</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+					<span>Portfolio</span>
+					<h2>Projects Done</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="rotate">
+						<h2 class="heading">Portfolio</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-pmc.html" class="work-img" style="background-image: url(images/work-1.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>Pune Municipal Corporation – Complaint Data Analysis</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech / Role:</strong> Project Lead | Data Analysis | 2025</p>
+								<p>Analyzed multi-year civic complaint data to uncover trends, inefficiencies, and escalation patterns. Proposed an ML-driven workflow for automatic complaint categorization and routing to improve response efficiency.</p>
+								<p class="read"><a href="project-pmc.html">View details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-finvault.html" class="work-img" style="background-image: url(images/work-2.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>FinVault – Secure Role-Based Online Banking Simulator</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech Stack:</strong> Java, Spring Boot, MySQL, JWT | 2024</p>
+								<p>Developed a full-stack banking platform with login, account creation, transaction tracking, and secure authentication. Focused on proper data validation, session handling, and backend reliability.</p>
+								<p class="read"><a href="project-finvault.html">View Details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-stegashield.html" class="work-img" style="background-image: url(images/work-3.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>StegaShield – PDF Steganography & Digital Signature Toolkit</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech Stack:</strong> Python, Streamlit, PyMuPDF, PyPDF2, ReportLab, Cryptography | 2025</p>
+								<p>Built a toolkit to securely hide/extract messages and files in PDFs while supporting RSA-2048 signing and SHA-256 verification. Ensures tamper detection and document authenticity for secure file sharing.</p>
+								<p class="read"><a href="project-stegashield.html">View details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-firesentinel.html" class="work-img" style="background-image: url(images/work-4.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>FireSentinel – YOLOv8-Based Wildfire Early Warning System</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech Stack:</strong> Python, YOLOv8, OpenCV, NumPy | 2024</p>
+								<p>Trained a custom YOLOv8 model to detect fire and smoke in surveillance and aerial footage. Designed for early warning situations where rapid detection significantly reduces damage and response time.</p>
+								<p class="read"><a href="project-firesentinel.html">View details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 col-pb-sm">
+						<h2>Let's Connect</h2>
+						<p>Feel free to reach out for collaboration, projects, or conversations.</p>
+						<p><strong>Email:</strong> <a href="mailto:varadjumbad15@gmail.com">varadjumbad15@gmail.com</a></p>
+					</div>
+
+					<div class="col-md-6 col-pb-sm">
+						<h2>Profiles</h2>
+						<p class="colorlib-social-icons">
+							<a href="https://linkedin.com/in/varad-jumbad-a02b57256" target="_blank"><i class="icon-linkedin2"></i> LinkedIn</a><br>
+							<a href="https://github.com/varad15" target="_blank"><i class="icon-github"></i> GitHub</a><br>
+							<a href="https://leetcode.com/u/varadjumbad15/" target="_blank"><i class="icon-code"></i> LeetCode</a><br>
+
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p>
+					&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart4" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				</p>
+			</div>
+		</div>
+</div>
+</div>
+</footer>
+
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

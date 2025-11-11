@@ -1,0 +1,696 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CV - Varad Jumbad</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Varad Jumbad's CV / Portfolio" />
+	<meta name="author" content="Varad Jumbad" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<style>
+    /* --- NEW TECH/DARK THEME STYLES --- */
+
+    /* GLOBAL STYLES */
+    body {
+        /* Dark, tech-savvy gradient background */
+        background: linear-gradient(135deg, #111827 0%, #1a2035 100%);
+        font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+        font-size: 1.125rem; /* Increased base font size (18px) */
+        color: #ffffff; /* PURE WHITE for max contrast */
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    a {
+        color: #22d3ee; /* Vibrant cyan accent */
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    /* Remove default bg from template */
+    #colorlib-page {
+        background: transparent;
+    }
+
+    /* SECTION HEADINGS (Minimalist Line Style) */
+    .row.text-center h2.bold {
+        font-family: 'Inter', sans-serif;
+        font-size: 3.2rem;
+        font-weight: 900;
+        margin: 0 auto 60px auto; /* Center and add margin */
+        padding: 0 18px 15px 18px; /* Padding for line */
+        letter-spacing: -1.5px;
+        transition: color 0.22s, transform 0.22s;
+        cursor: pointer;
+        color: #ffffff !important;
+        display: inline-block; /* Allow line to be only as wide as text */
+        position: relative;
+        text-align: center;
+        will-change: color, transform;
+    }
+    .row.text-center h2.bold:hover {
+        color: #22d3ee !important; /* Cyan accent on hover */
+        transform: scale(1.05); /* Keep a subtle hover effect */
+    }
+    /* The new gradient line */
+    .row.text-center h2.bold::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 60%; /* Line is 60% of the text width */
+        height: 4px;
+        background: linear-gradient(90deg, #22d3ee 0%, #06b6d4 100%);
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+    .row.text-center h2.bold:hover::after {
+        width: 100%; /* Line expands on hover */
+    }
+
+    /* General Heading Overrides (for muted bg text) */
+    .rotate h2.heading {
+        color: rgba(255,255,255,0.05) !important; /* Muted bg text */
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+    }
+
+    /* ABOUT SECTION */
+    #colorlib-about {
+        background: transparent;
+        padding-top: 80px;
+    }
+    .about-img {
+        border-radius: 24px;
+        border: 1px solid #374151;
+        opacity: 0.9;
+    }
+    .about-desc h2 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+        color: #ffffff !important;
+        letter-spacing: -1px;
+    }
+    /* Style the carousel text */
+    .about-desc .owl-carousel3 .item h2 span {
+        color: #ffffff !important;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        letter-spacing: -1px;
+    }
+    .about-desc .owl-carousel3 .item h2 span:last-child {
+        color: #22d3ee !important; /* Accent for name/title */
+    }
+    .about-desc .desc p {
+        color: #ffffff; /* PURE WHITE */
+        font-size: 2.3rem; /* FONT SIZE INCREASED */
+        line-height: 1.8;
+    }
+
+    /* PROJECTS/WORKS SECTION */
+    #colorlib-work {
+        background: transparent;
+        padding-top: 50px;
+    }
+    .intro-heading span { /* "Portfolio" */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #22d3ee;
+        font-size: 1.9rem;
+    }
+    .intro-heading h2 { /* "Done Projects" */
+        font-family: 'Inter', sans-serif;
+        font-size: 2.8rem;
+        color: #ffffff !important;
+        margin-bottom: 15px;
+        font-weight: 900;
+    }
+    .work-entry {
+        background: #1F2937;
+        border-radius: 16px;
+        border: 1px solid #374151;
+        box-shadow: 0 6px 23px 0 rgba(0,0,0,0.3);
+        margin-bottom: 40px;
+        transition: transform .25s, box-shadow .23s, border-color .23s;
+        overflow: hidden; /* Ensure rounded corners */
+        will-change: transform, box-shadow;
+    }
+    .work-entry:hover {
+        transform: scale(1.02) translateY(-8px);
+        box-shadow: 0 0 25px 0 rgba(34, 211, 238, 0.3); /* Cyan glow */
+        border-color: #22d3ee;
+    }
+    .work-entry .work-img {
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    .work-entry:hover .work-img {
+        opacity: 1;
+    }
+
+    /* REMOVED dark overlay on hover */
+    .work-entry a.work-img:hover .display-t {
+        background: transparent; /* No overlay */
+        opacity: 1;
+    }
+
+    /* MODIFIED: Project Title */
+    .work-entry .work-name h2 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 900; /* BOLD */
+        color: #111827 !important; /* BLACK TEXT */
+        font-size: 2.0rem; /* Adjusted size for label */
+        text-shadow: none; /* Removed shadow */
+        background: rgba(255, 255, 255, 0.95); /* LIGHT BACKGROUND */
+        padding: 10px 20px;
+        border-radius: 8px; /* Rounded label */
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    /* Added hover effect for the label */
+    .work-entry:hover .work-name h2 {
+         background: rgba(255, 255, 255, 1); /* Opaque white on hover */
+         color: #000000 !important;
+         transform: scale(1.03);
+    }
+
+    .work-entry .desc {
+        padding: 20px 0 30px 0; /* Add padding to desc */
+    }
+
+    /* === FONT SIZE INCREASED HERE === */
+    .work-entry .desc p {
+        color: #ffffff; /* PURE WHITE */
+        font-size: 1.4rem; /* FONT SIZE INCREASED */
+    }
+    /* ================================ */
+
+    /* The "Tech:" line */
+    .work-entry .desc p strong {
+        font-family: 'Fira Code', monospace; /* Monospace for tech! */
+        color: #22d3ee;
+        font-weight: 500;
+        background-color: rgba(34, 211, 238, 0.1);
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 1.95rem;
+    }
+    .work-entry .desc p.read a {
+        color: #ffbd59; /* Secondary accent for links */
+        font-weight: 700;
+    }
+    .work-entry .desc p.read a:hover {
+        color: #ffffff;
+    }
+
+    /* ACHIEVEMENTS CAROUSEL */
+    #colorlib-testimony {
+        padding-top: 50px;
+        background: transparent;
+    }
+    #colorlib-testimony .testimony, #colorlib-testimony .item {
+        font-size: 1.13rem !important;
+    }
+    #colorlib-testimony .owl-carousel .item .testimony {
+        background: #1F2937;
+        border-radius: 24px;
+        box-shadow: 0 10px 35px 0 rgba(0,0,0,0.3);
+        border: 1px solid #374151;
+        padding: 40px 45px 30px 45px;
+        margin: 20px auto 14px auto;
+    }
+    #colorlib-testimony blockquote {
+        font-size: 1.15rem !important;
+        color: #ffffff; /* PURE WHITE */
+        border-left: 0;
+        padding: 0 0 0 10px;
+        margin: 0;
+        position: relative;
+    }
+    #colorlib-testimony blockquote::before {
+        content: '“';
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        font-size: 7rem;
+        color: #2d3748; /* Dark, subtle quote mark */
+        position: absolute;
+        left: -10px;
+        top: -25px;
+        z-index: 1;
+        line-height: 1;
+    }
+    #colorlib-testimony blockquote p {
+        position: relative;
+        z-index: 2;
+        font-size: 1.3rem !important; /* Increased font size */
+        font-style: italic;
+        color: #ffffff; /* Brighter text */
+        line-height: 1.6;
+    }
+    #colorlib-testimony blockquote p strong {
+        color: #22d3ee; /* Cyan accent */
+        font-style: normal;
+    }
+    #colorlib-testimony .testimony span {
+        display: block;
+        text-align: right;
+        margin-top: 20px;
+        font-weight: 700;
+        color: #ffbd59; /* Keep yellow as secondary accent */
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* DARK FOOTER */
+    footer {
+        position: relative;
+        z-index: 10;
+    }
+    #footer {
+        background: #111827; /* Match darkest page color */
+        padding: 70px 0 50px 0;
+        color: #9ca3af; /* Muted light text */
+        border-top: 1px solid #374151; /* Separator */
+    }
+    #footer h2 {
+        font-family: 'Inter', sans-serif;
+        color: #fff !important;
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    #footer p {
+        color: #b0b9c6; /* Brighter text */
+        font-size: 1.1rem; /* Increased font size */
+    }
+    #footer a {
+        color: #22d3ee;
+    }
+    #footer a:hover {
+        color: #fff;
+    }
+    #footer .colorlib-social-icons a {
+        font-size: 1.15rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 12px;
+        color: #ffffff; /* PURE WHITE */
+        transition: all 0.3s ease;
+    }
+    #footer .colorlib-social-icons a:hover {
+        color: #22d3ee;
+        transform: translateX(5px);
+    }
+    #footer .colorlib-social-icons a i {
+        margin-right: 14px;
+        font-size: 1.3rem;
+        width: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        color: #22d3ee; /* Cyan icons */
+    }
+    #footer .row {
+        margin-bottom: 30px;
+    }
+    #footer .text-center p,
+    #footer .text-center p a {
+        color: #6b7280; /* Very muted for copyright */
+        font-size: 0.95rem;
+    }
+    #footer .text-center p a:hover {
+        color: #22d3ee;
+    }
+    #footer .text-center p i {
+        color: #ffbd59; /* Keep yellow heart */
+    }
+
+    /* DARK NAV MENU (OVERRIDE) */
+    #colorlib-main-nav {
+        background: rgba(17, 24, 39, 0.98); /* Dark, slightly transparent */
+    }
+    #colorlib-main-nav ul li a {
+        color: #ffffff; /* PURE WHITE */
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+    #colorlib-main-nav ul li a:hover {
+        color: #22d3ee; /* Cyan hover */
+    }
+    #colorlib-main-nav ul li.active a {
+        color: #22d3ee;
+    }
+    .colorlib-nav-toggle {
+        color: #fff;
+    }
+    .colorlib-nav-toggle i::before, .colorlib-nav-toggle i::after {
+        background: #fff;
+    }
+    .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
+        background: #22d3ee;
+    }
+
+
+    /* RESPONSIVE IMPROVEMENTS */
+    @media (max-width: 991px) {
+        .about-desc {
+            margin-top: 30px;
+        }
+    }
+    @media (max-width: 600px) {
+        body { font-size: 1.05rem; } /* Increased mobile base font */
+        .row.text-center h2.bold {
+            font-size: 2rem !important;
+        }
+        .intro-heading h2 {
+            font-size: 2.2rem;
+        }
+        .work-entry .desc p strong {
+            font-size: 0.9rem;
+        }
+        #colorlib-testimony .owl-carousel .item .testimony {
+            padding: 30px 25px 20px 25px;
+        }
+        #colorlib-testimony blockquote p {
+            font-size: 1.1rem !important;
+        }
+        #colorlib-testimony blockquote::before {
+            font-size: 5rem;
+            top: -10px;
+        }
+        footer .col-md-6 {
+            margin-bottom: 30px;
+        }
+    }
+    </style>
+
+</head>
+<body>
+
+<nav id="colorlib-main-nav" role="navigation">
+	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+	<div class="js-fullheight colorlib-table">
+		<div class="colorlib-table-cell js-fullheight">
+
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="work.html">Work</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div id="colorlib-page">
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="colorlib-navbar-brand">
+					</div>
+					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="colorlib-about">
+		<div class="container">
+			<div class="row text-center">
+				<h2 class="bold">About</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-5 animate-box">
+					<div class="owl-carousel3">
+						<div class="item">
+							<img class="img-responsive about-img" src="images/about.jpg" alt="html5 bootstrap template by colorlib.com">
+						</div>
+						<div class="item">
+							<img class="img-responsive about-img" src="images/about-2.jpg" alt="html5 bootstrap template by colorlib.com">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-md-push-1 animate-box">
+					<div class="about-desc">
+						<div class="owl-carousel3">
+							<div class="item">
+								<h2><span>Varad Jumbad</span></h2>
+							</div>
+							<div class="item">
+								<h2><span>I'm</span><span>An Aspiring Developer</span></h2>
+							</div>
+						</div>
+						<div class="desc">
+
+							<p>A <a href="#">Computer Engineering</a> student with a strong interest in software development and practical problem-solving. I enjoy building systems that are structured, reliable, and meaningful in real use. Over time, I’ve developed skills in areas such as backend development, databases, and full-stack application design, while consistently improving my understanding of how technology can create real-world impact. I value learning, collaboration, and approaching work with clarity and purpose, and I continue to explore new tools and concepts to grow both technically and creatively.</p>
+							<p class="colorlib-social-icons">
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="colorlib-work">
+		<div class="container">
+			<div class="row text-center">
+				<h2 class="bold">Works</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+					<span>Portfolio</span>
+					<h2>Done Projects</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="rotate">
+						<h2 class="heading">Portfolio</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-pmc.html" class="work-img" style="background-image: url(images/work-1.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>Pune Municipal Corporation – Complaint Data Analysis (Industry Project)</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech/Role: Project Lead | Data Analysis | 2025</strong></p>
+								<p>Analyzed multi-year civic complaint data to identify key patterns, inefficiencies, and data gaps; proposed an ML-driven pipeline for automated complaint categorization and routing.</p>
+								<p class="read"><a href="project-pmc.html">View details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-finvault.html" class="work-img" style="background-image: url(images/work-2.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>FinVault – Secure Role-Based Online Banking Simulator</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech: Java, Spring Boot, MySQL, JWT | 2024</strong></p>
+								<p>Full-stack banking simulation with login/registration, account management, and transactions using JWT-based authentication and a normalized relational schema.</p>
+								<p class="read"><a href="project-finvault.html">View details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-stegashield.html" class="work-img" style="background-image: url(images/work-3.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>StegaShield – PDF Steganography & Digital Signature Toolkit</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech: Python, Streamlit, PyMuPDF, PyPDF2, ReportLab, Cryptography | 2025</strong></p>
+								<p>Hide/extract messages and files in PDFs via metadata/annotations; add RSA-2048 signing and SHA-256 verification for tamper detection.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-firesentinel.html" class="work-img" style="background-image: url(images/work-4.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>FireSentinel – YOLOv8-Based Wildfire Early Warning System</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech: Python, YOLOv8, OpenCV, NumPy | 2024</strong></p>
+								<p>Custom YOLOv8 model for real-time fire/smoke detection across aerial and surveillance footage, optimized for low-latency inference.</p>
+								<p class="read"><a href="project-firesentinel.html">View details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="colorlib-testimony">
+		<div class="container">
+			<div class="row text-center">
+				<h2 class="bold">Achievements</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+					<span>Achievements</span>
+					<h2>Highlights</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="rotate">
+						<h2 class="heading">Achievements</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row animate-box">
+				<div class="owl-carousel">
+
+					<div class="item">
+						<div class="col-md-12 text-center">
+							<div class="testimony">
+								<blockquote>
+									<p>Published research paper titled <strong>"Forest Fire and Smoke Detection Using ML Algorithm"</strong> presented at the <strong>5th ICDICI 2024</strong>, now indexed on <strong>IEEE Xplore</strong>.</p>
+									<span>&mdash; 2024</span>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="col-md-12 text-center">
+							<div class="testimony">
+								<blockquote>
+									<p>Presented <strong>"IndiArt: AI-Powered Indian Art Exploration System"</strong> at <strong>ICICDS 2025</strong>, to be published with <strong>Springer</strong>.</p>
+									<span>&mdash; 2025</span>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="col-md-12 text-center">
+							<div class="testimony">
+								<blockquote>
+									<p>Filed a <strong>Patent (2023)</strong> for <strong>"MineGuard Pro"</strong>, a safety-focused smart helmet system designed for coal miners.</p>
+									<span>&mdash; 2023</span>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 col-pb-sm">
+						<h2>Let's Connect</h2>
+						<p>Feel to reach out for collaboration, projects, or conversations.</p>
+						<p><strong>Email:</strong> <a href="mailto:varadjumbad15@gmail.com">varadjumbad15@gmail.com</a></p>
+					</div>
+
+					<div class="col-md-6 col-pb-sm">
+						<h2>Profiles</h2>
+						<p class="colorlib-social-icons">
+							<a href="https://linkedin.com/in/varad-jumbad-a02b57256" target="_blank"><i class="icon-linkedin2"></i> LinkedIn</a><br>
+							<a href="https://github.com/varad15" target="_blank"><i class="icon-github"></i> GitHub</a><br>
+							<a href="https://leetcode.com/u/varadjumbad15/" target="_blank"><i class="icon-code"></i> LeetCode</a><br>
+
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p>
+					&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart4" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				</p>
+			</div>
+		</div>
+</div>
+</div>
+</footer>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
+also i want a back to top button at the end of each page
