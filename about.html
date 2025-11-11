@@ -3,8 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>About - Varad Jumbad</title>
+	<title>CV - Varad Jumbad</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Varad Jumbad's CV / Portfolio" />
+	<meta name="author" content="Varad Jumbad" />
+
+	<link rel="shortcut icon" href="favicon.ico">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +20,11 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/style.css"> <style>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<style>
     /* --- NEW TECH/DARK THEME STYLES --- */
 
     /* GLOBAL STYLES */
@@ -24,8 +32,8 @@
         /* Dark, tech-savvy gradient background */
         background: linear-gradient(135deg, #111827 0%, #1a2035 100%);
         font-family: 'Inter', sans-serif; /* Modern sans-serif font */
-        font-size: 1.05rem;
-        color: #d1d5db; /* Light grey for body text */
+        font-size: 1.125rem; /* Increased base font size (18px) */
+        color: #ffffff; /* PURE WHITE for max contrast */
         margin: 0;
         padding: 0;
         line-height: 1.7;
@@ -46,332 +54,184 @@
         background: transparent;
     }
 
-    /* SECTION HEADING CARDS */
-    .section-heading-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto 48px auto;
-        padding: 32px 0 30px 0;
-        max-width: 650px;
-        background: #1F2937; /* Dark card background */
-        border-radius: 24px;
-        border: 1px solid #374151; /* Subtle border */
-        box-shadow: 0 4px 12px 0 rgba(0,0,0,0.3); /* Dark shadow */
-        transition: box-shadow 0.23s, transform 0.23s, border-color 0.23s;
-        position: relative;
-        z-index: 2;
-        animation: fadeInPop 1.1s cubic-bezier(.26,.96,.51,.94);
-        will-change: transform, opacity, box-shadow, border-color;
-    }
-    .section-heading-container:hover {
-        box-shadow: 0 0 25px 0 rgba(34, 211, 238, 0.3); /* Cyan glow */
-        transform: scale(1.032);
-        border-color: #22d3ee;
-    }
-    .section-heading-container h2.bold {
+    /* SECTION HEADINGS (Minimalist Line Style) */
+    .row.text-center h2.bold {
         font-family: 'Inter', sans-serif;
         font-size: 3.2rem;
         font-weight: 900;
-        margin: 0;
-        padding: 0 18px;
+        margin: 0 auto 60px auto; /* Center and add margin */
+        padding: 0 18px 15px 18px; /* Padding for line */
         letter-spacing: -1.5px;
         transition: color 0.22s, transform 0.22s;
         cursor: pointer;
-        animation: popIn 1.1s cubic-bezier(.12,.89,.34,1.28);
-        color: #ffffff !important; /* Bright white heading */
+        color: #ffffff !important;
+        display: inline-block; /* Allow line to be only as wide as text */
+        position: relative;
+        text-align: center;
+        will-change: color, transform;
     }
-    .section-heading-container h2.bold:hover {
+    .row.text-center h2.bold:hover {
         color: #22d3ee !important; /* Cyan accent on hover */
-        transform: scale(1.08);
+        transform: scale(1.05); /* Keep a subtle hover effect */
     }
-    @keyframes fadeInPop {
-        0% { opacity: 0; transform: scale(0.89) translateY(-30px);}
-        100% { opacity: 1; transform: scale(1) translateY(0);}
-    }
-    @keyframes popIn {
-        0% { opacity: 0; transform: scale(0.89);}
-        100% { opacity: 1; transform: scale(1);}
-    }
-
-    /* ABOUT SECTION & CARDS */
-    #colorlib-about {
-        padding: 80px 0 52px 0;
-        background: transparent; /* Let body background show */
-        position: relative; /* For any future pseudo-elements */
-    }
-    .about-section-flex {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 54px;
-        max-width: 1200px;
-        margin: 0 auto 40px auto;
-        animation: fadeUp 1.15s cubic-bezier(.15,.78,.52,1.06);
-    }
-    @keyframes fadeUp {
-        0% { opacity: 0; transform: translateY(45px);}
-        100% { opacity: 1; transform: none;}
-    }
-
-    /* === CSS UPDATED for Image Carousel === */
-    .about-img-card {
-        background: #1F2937;
-        border-radius: 32px;
-        border: 1px solid #374151;
-        box-shadow: 0 10px 35px 0 rgba(0,0,0,0.3);
-        overflow: hidden;
-        width: 400px;
-        min-width: 220px;
-        max-width: 95vw;
-        /* Removed flex properties to allow carousel to fill */
-        animation: fadeInPop 1.3s 0.1s both;
-    }
-    .about-img-card .item .about-img {
-        width: 100%;
-        height: auto;
-        border-radius: 32px;
-        object-fit: cover;
-        display: block;
-        opacity: 0.9;
-        transition: opacity 0.3s;
-    }
-    .about-img-card .item .about-img:hover {
-        opacity: 1;
-    }
-    /* Owl carousel dots styling */
-    .about-img-card .owl-theme .owl-dots {
+    /* The new gradient line */
+    .row.text-center h2.bold::after {
+        content: '';
         position: absolute;
-        bottom: 15px;
-        width: 100%;
+        display: block;
+        width: 60%; /* Line is 60% of the text width */
+        height: 4px;
+        background: linear-gradient(90deg, #22d3ee 0%, #06b6d4 100%);
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        border-radius: 2px;
+        transition: width 0.3s ease;
     }
-    .about-img-card .owl-theme .owl-dots .owl-dot span {
-        background: #ffffff;
-        opacity: 0.5;
+    .row.text-center h2.bold:hover::after {
+        width: 100%; /* Line expands on hover */
     }
-    .about-img-card .owl-theme .owl-dots .owl-dot.active span,
-    .about-img-card .owl-theme .owl-dots .owl-dot:hover span {
-        background: #22d3ee;
-        opacity: 1;
-    }
-    /* ======================================= */
 
-    .about-desc-card {
-        background: #1F2937;
-        border-radius: 32px;
+    /* General Heading Overrides (for muted bg text) */
+    .rotate h2.heading {
+        color: rgba(255,255,255,0.05) !important; /* Muted bg text */
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+    }
+
+    /* ABOUT SECTION */
+    #colorlib-about {
+        background: transparent;
+        padding-top: 80px;
+    }
+    .about-img {
+        border-radius: 24px;
         border: 1px solid #374151;
-        box-shadow: 0 10px 35px 0 rgba(0,0,0,0.25);
-        padding: 56px 45px 48px 45px;
-        margin: 0;
-        min-width: 320px;
-        max-width: 620px;
-        flex: 1 1 320px;
-        animation: fadeUp 1.4s 0.15s both;
+        opacity: 0.9;
     }
-
-    /* === CSS ADDED for Title Carousel === */
-    .about-desc-card .owl-carousel3 .item h2 {
+    .about-desc h2 {
         font-family: 'Inter', sans-serif;
-        font-weight: 900;
+        font-weight: 800;
         color: #ffffff !important;
         letter-spacing: -1px;
-        font-size: 2.7rem; /* Original size from this file */
-        margin: 0 0 11px 0;
-        line-height: 1.1; /* <-- ADDED FROM INDEX.HTML */
     }
-    .about-desc-card .owl-carousel3 .item h2 span {
+    /* Style the carousel text */
+    .about-desc .owl-carousel3 .item h2 span {
         color: #ffffff !important;
         font-family: 'Inter', sans-serif;
         font-weight: 900;
         letter-spacing: -1px;
-        display: block; /* To match the <br> structure */
     }
-    .about-desc-card .owl-carousel3 .item h2 span:last-child {
+    .about-desc .owl-carousel3 .item h2 span:last-child {
         color: #22d3ee !important; /* Accent for name/title */
-
     }
-    /* ==================================== */
-
-    .about-desc-card .desc {
-        margin-top: 24px;
-        font-size: 1.15rem; /* Adjusted for Inter font */
-        color: #d1d5db;
-        animation: fadeInPop 1.3s 0.23s both;
-    }
-
-    /* === FONT SIZE UPDATED === */
-    .about-desc-card p {
-        color: #ffffff; /* Changed from #d1d5db */
-        font-size: 2.3rem; /* <-- CHANGED FROM 1.1rem (to match index.html) */
+    .about-desc .desc p {
+        color: #ffffff; /* PURE WHITE */
+        font-size: 2.3rem; /* FONT SIZE INCREASED */
         line-height: 1.8;
     }
-    /* ========================= */
 
-    /* "About" subheading */
-    .about-desc-card .desc div[style*="color:#59627a"] {
-        color: #9ca3af !important; /* Muted light grey */
-    }
-
-    /* SKILL CARDS */
-    #colorlib-about .col-md-4.animate-box,
-    #colorlib-about .col-md-12.animate-box { /* <-- ADDED RULE for full-width cards */
-        background: #1F2937;
-        border-radius: 24px;
-        padding: 32px 30px 28px 30px;
-        margin-bottom: 30px;
-        box-shadow: 0 6px 23px 0 rgba(0,0,0,0.3);
-        border: 1px solid #374151;
-        font-size: 1.05rem;
-        transition: transform .25s, box-shadow .23s, border-color .23s;
-        animation: fadeInPop 1.12s 0.15s both;
-    }
-    #colorlib-about .col-md-4.animate-box:hover,
-    #colorlib-about .col-md-12.animate-box:hover { /* <-- ADDED RULE for full-width cards */
-        transform: scale(1.03) translateY(-8px);
-        box-shadow: 0 0 25px 0 rgba(34, 211, 238, 0.3); /* Cyan glow */
-        border-color: #22d3ee;
-    }
-    #colorlib-about h3 { /* Skill card titles */
-        font-family: 'Inter', sans-serif;
-        font-size: 1.7rem;
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 22px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid #374151;
-    }
-    #colorlib-about ul { /* Skill card lists */
-        font-size: 1.05rem;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0;
-        list-style: none;
-    }
-    #colorlib-about ul li {
-        margin-bottom: 14px;
-        position: relative;
-        padding-left: 30px;
-        line-height: 1.6;
-        color: #d1d5db;
-    }
-    #colorlib-about ul li::before {
-        content: '•';
-        position: absolute;
-        left: 10px;
-        top: -1px;
-        color: #22d3ee; /* Cyan accent bullet */
-        font-size: 1.3rem;
-        line-height: inherit;
-        font-weight: 900;
-    }
-
-    /* PROJECT SECTION */
-    #colorlib-services {
+    /* PROJECTS/WORKS SECTION */
+    #colorlib-work {
         background: transparent;
         padding-top: 50px;
     }
-
-    /* Project intro text */
-    .intro-heading span {
+    .intro-heading span { /* "Portfolio" */
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: #22d3ee; /* Cyan accent */
-        font-size: 0.9rem;
-        display: block;
-        margin-bottom: 5px;
+        color: #22d3ee;
+        font-size: 1.9rem;
     }
-    .intro-heading h2 {
+    .intro-heading h2 { /* "Done Projects" */
         font-family: 'Inter', sans-serif;
         font-size: 2.8rem;
         color: #ffffff !important;
         margin-bottom: 15px;
         font-weight: 900;
-        letter-spacing: -1px;
     }
-    .intro-heading p {
-        color: #d1d5db;
-        font-size: 1.1rem;
-        max-width: 600px;
+    .work-entry {
+        background: #1F2937;
+        border-radius: 16px;
+        border: 1px solid #374151;
+        box-shadow: 0 6px 23px 0 rgba(0,0,0,0.3);
+        margin-bottom: 40px;
+        transition: transform .25s, box-shadow .23s, border-color .23s;
+        overflow: hidden; /* Ensure rounded corners */
+        will-change: transform, box-shadow;
+    }
+    .work-entry:hover {
+        transform: scale(1.02) translateY(-8px);
+        box-shadow: 0 0 25px 0 rgba(34, 211, 238, 0.3); /* Cyan glow */
+        border-color: #22d3ee;
+    }
+    .work-entry .work-img {
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    .work-entry:hover .work-img {
+        opacity: 1;
     }
 
-    /* PROJECT CARDS */
-    .services.animate-box {
-        background: #1F2937;
-        border-radius: 16px; /* Slightly sharper radius */
-        padding: 29px 26px 23px 32px;
-        margin-bottom: 36px;
-        box-shadow: 0 6px 23px 0 rgba(0,0,0,0.3);
-        border: 1px solid #374151;
-        border-left: 5px solid #22d3ee; /* Cyan accent border */
-        font-size: 1.13rem;
-        transition: transform .25s, box-shadow .23s, border-color .23s, border-left-color .23s;
-        animation: fadeInPop 1.12s 0.15s both;
+    /* REMOVED dark overlay on hover */
+    .work-entry a.work-img:hover .display-t {
+        background: transparent; /* No overlay */
+        opacity: 1;
     }
-    /* Removed the :hover from the main rule so the :hover on the <a> tag takes priority */
-    .services.animate-box:hover {
-        transform: scale(1.024) translateY(-8px);
-        box-shadow: 0 0 25px 0 rgba(34, 211, 238, 0.3); /* Cyan glow */
-        border-color: #374151; /* Keep side border subtle */
-        border-left-color: #06b6d4; /* Darker cyan on hover */
-    }
-    .services.animate-box h3 {
+
+    /* MODIFIED: Project Title */
+    .work-entry .work-name h2 {
         font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        color: #ffffff;
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-        transition: color 0.2s; /* Add transition for h3 color */
+        font-weight: 900; /* BOLD */
+        color: #111827 !important; /* BLACK TEXT */
+        font-size: 2.0rem; /* Adjusted size for label */
+        text-shadow: none; /* Removed shadow */
+        background: rgba(255, 255, 255, 0.95); /* LIGHT BACKGROUND */
+        padding: 10px 20px;
+        border-radius: 8px; /* Rounded label */
+        display: inline-block;
+        transition: all 0.3s ease;
     }
-    .services.animate-box p {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #d1d5db;
-        margin-bottom: 10px;
+    /* Added hover effect for the label */
+    .work-entry:hover .work-name h2 {
+         background: rgba(255, 255, 255, 1); /* Opaque white on hover */
+         color: #000000 !important;
+         transform: scale(1.03);
     }
-    .services.animate-box p:last-child {
-        margin-bottom: 0;
+
+    .work-entry .desc {
+        padding: 20px 0 30px 0; /* Add padding to desc */
     }
-    /* This is the "Tech Stack / Role" line */
-    .services.animate-box p strong {
+
+    /* === FONT SIZE INCREASED HERE === */
+    .work-entry .desc p {
+        color: #ffffff; /* PURE WHITE */
+        font-size: 1.4rem; /* FONT SIZE INCREASED */
+    }
+    /* ================================ */
+
+    /* The "Tech:" line */
+    .work-entry .desc p strong {
         font-family: 'Fira Code', monospace; /* Monospace for tech! */
         color: #22d3ee;
-        font-weight: 500; /* Fira Code is bold at 500 */
-        letter-spacing: 0px;
-        background-color: rgba(34, 211, 238, 0.1); /* Subtle cyan highlight */
+        font-weight: 500;
+        background-color: rgba(34, 211, 238, 0.1);
         padding: 3px 8px;
         border-radius: 6px;
-        font-size: 0.95rem;
-        display: inline-block;
+        font-size: 1.95rem;
     }
-
-    /* === NEW CSS FOR CLICKABLE PROJECT CARDS === */
-    .project-link-card {
-        display: block;
-        color: inherit; /* Inherit text color from parent */
-        text-decoration: none;
+    .work-entry .desc p.read a {
+        color: #ffbd59; /* Secondary accent for links */
+        font-weight: 700;
     }
-    .project-link-card:hover,
-    .project-link-card:focus {
-        color: inherit;
-        text-decoration: none;
-    }
-    /* Make the project title turn cyan on hover to show it's a link */
-    .project-link-card:hover .services.animate-box h3 {
-        color: #22d3ee;
-    }
-    /* =========================================== */
-
-    /* Project image */
-    .one-forth.services-img {
-        border-radius: 16px;
-        opacity: 0.8;
+    .work-entry .desc p.read a:hover {
+        color: #ffffff;
     }
 
     /* ACHIEVEMENTS CAROUSEL */
     #colorlib-testimony {
         padding-top: 50px;
+        background: transparent;
     }
     #colorlib-testimony .testimony, #colorlib-testimony .item {
         font-size: 1.13rem !important;
@@ -383,11 +243,10 @@
         border: 1px solid #374151;
         padding: 40px 45px 30px 45px;
         margin: 20px auto 14px auto;
-        animation: fadeUp 1.3s 0.13s both;
     }
     #colorlib-testimony blockquote {
         font-size: 1.15rem !important;
-        color: #d1d5db;
+        color: #ffffff; /* PURE WHITE */
         border-left: 0;
         padding: 0 0 0 10px;
         margin: 0;
@@ -408,9 +267,9 @@
     #colorlib-testimony blockquote p {
         position: relative;
         z-index: 2;
-        font-size: 1.25rem !important;
+        font-size: 1.3rem !important; /* Increased font size */
         font-style: italic;
-        color: #f3f4f6; /* Slightly brighter text */
+        color: #ffffff; /* Brighter text */
         line-height: 1.6;
     }
     #colorlib-testimony blockquote p strong {
@@ -426,22 +285,6 @@
         font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 1px;
-    }
-
-    /* General Heading Overrides */
-    h2.bold, #colorlib-services h2.bold, #colorlib-testimony h2.bold, #colorlib-testimony .rotate h2.heading, footer h2 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 900;
-        letter-spacing: -.5px;
-        font-size: 2.6rem;
-        transition: color 0.23s, transform 0.23s;
-        cursor: pointer;
-        margin: 0;
-        padding: 0;
-        color: #ffffff !important; /* Default white */
-    }
-    .rotate h2.heading {
-        color: rgba(255,255,255,0.05) !important; /* Muted bg text */
     }
 
     /* DARK FOOTER */
@@ -463,8 +306,8 @@
         margin-bottom: 20px;
     }
     #footer p {
-        color: #9ca3af;
-        font-size: 1.05rem;
+        color: #b0b9c6; /* Brighter text */
+        font-size: 1.1rem; /* Increased font size */
     }
     #footer a {
         color: #22d3ee;
@@ -477,7 +320,7 @@
         font-weight: 600;
         display: block;
         margin-bottom: 12px;
-        color: #d1d5db; /* Brighter for main links */
+        color: #ffffff; /* PURE WHITE */
         transition: all 0.3s ease;
     }
     #footer .colorlib-social-icons a:hover {
@@ -514,12 +357,12 @@
         background: rgba(17, 24, 39, 0.98); /* Dark, slightly transparent */
     }
     #colorlib-main-nav ul li a {
-        color: #d1d5db;
+        color: #ffffff; /* PURE WHITE */
         font-family: 'Inter', sans-serif;
         font-weight: 700;
     }
     #colorlib-main-nav ul li a:hover {
-        color: #ffffff;
+        color: #22d3ee; /* Cyan hover */
     }
     #colorlib-main-nav ul li.active a {
         color: #22d3ee;
@@ -536,61 +379,20 @@
 
 
     /* RESPONSIVE IMPROVEMENTS */
-    @media (max-width: 1200px) {
-        .about-section-flex {
-            max-width: 99vw;
-            gap: 40px;
-        }
-    }
     @media (max-width: 991px) {
-        .about-section-flex {
-            flex-direction: column;
-            gap: 30px;
-            align-items: center;
-        }
-        .about-img-card, .about-desc-card {
-            max-width: 95vw;
-            width: 100%;
-        }
-        #colorlib-about .col-md-4.animate-box,
-        #colorlib-about .col-md-12.animate-box { /* <-- ADDED RULE */
-            max-width: 95vw;
-            width: 100%;
-        }
-        .section-heading-container {
-            margin-bottom: 32px;
-            max-width: 94vw;
-        }
-        .about-desc-card {
-            padding: 35px 30px;
-        }
-        .services-flex {
-            flex-direction: column-reverse;
-        }
-        .one-forth.services-img {
-            height: 300px;
-            margin-bottom: 30px;
+        .about-desc {
+            margin-top: 30px;
         }
     }
     @media (max-width: 600px) {
-        body { font-size: 1rem; }
-        .about-img-card, .about-desc-card,
-        #colorlib-about .col-md-4.animate-box,
-        #colorlib-about .col-md-12.animate-box { /* <-- ADDED RULE */
-            border-radius: 24px;
-            min-width: 0;
-            padding: 24px 20px !important;
-        }
-        .about-desc-card .owl-carousel3 .item h2, .about-desc-card h2 { /* Target both old and new */
-            font-size: 2.1rem !important;
-        }
-        .section-heading-container h2.bold {
+        body { font-size: 1.05rem; } /* Increased mobile base font */
+        .row.text-center h2.bold {
             font-size: 2rem !important;
         }
         .intro-heading h2 {
             font-size: 2.2rem;
         }
-        .services.animate-box p strong {
+        .work-entry .desc p strong {
             font-size: 0.9rem;
         }
         #colorlib-testimony .owl-carousel .item .testimony {
@@ -607,32 +409,8 @@
             margin-bottom: 30px;
         }
     }
-    /* --- BACK TO TOP BUTTON --- */
-    .back-to-top-btn {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        display: none; /* Hidden by default */
-        background: #22d3ee; /* Cyan */
-        color: #111827; /* Dark text */
-        font-size: 1.5rem;
-        width: 50px;
-        height: 50px;
-        line-height: 50px; /* Aligns icon vertically */
-        text-align: center;
-        border-radius: 50%;
-        z-index: 999;
-        transition: all 0.3s ease;
-    }
-    .back-to-top-btn i {
-        line-height: inherit; /* Helps with icon alignment */
-    }
-    .back-to-top-btn:hover {
-        background: #ffffff; /* White on hover */
-        color: #111827;
-        transform: scale(1.1);
-    }
     </style>
+
 </head>
 <body>
 
@@ -640,12 +418,13 @@
 	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
 	<div class="js-fullheight colorlib-table">
 		<div class="colorlib-table-cell js-fullheight">
+
 			<div class="row">
 				<div class="col-md-12">
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="work.html">Work</a></li>
-						<li class="active"><a href="about.html">About</a></li>
+						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
@@ -659,166 +438,160 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="colorlib-navbar-brand"></div>
+					<div class="colorlib-navbar-brand">
+					</div>
 					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 				</div>
 			</div>
 		</div>
 	</header>
+
 	<div id="colorlib-about">
 		<div class="container">
-
-			<div class="about-section-flex">
-
-				<div class="about-img-card">
-					<div class="owl-carousel3">
-						<div class="item">
-							<img class="img-responsive about-img" src="images/about.jpg" alt="A portrait of Varad Jumbad">
-						</div>
-						<div class="item">
-							<img class="img-responsive about-img" src="images/about-2.jpg" alt="A second portrait of Varad Jumbad">
-						</div>
-					</div>
-				</div>
-				<div class="about-desc-card">
-
-					<div class="owl-carousel3">
-						<div class="item">
-							<h2><span>Varad Jumbad</span></h2>
-						</div>
-						<div class="item">
-							<h2><span>I'm</span><span>An Aspiring SDE</span></h2>
-						</div>
-					</div>
-					<div class="desc">
-						<div style="font-size:1.09rem;text-transform:uppercase;letter-spacing:2px;color:#59627a;margin-bottom:13px;font-weight:700;">About</div>
-						<p>A <a href="#">Computer Engineering</a> student with a strong interest in software development and practical problem-solving. I enjoy building systems that are structured, reliable, and meaningful in real use. Over time, I’ve developed skills in areas such as backend development, databases, and full-stack application design, while consistently improving my understanding of how technology can create real-world impact. I value learning, collaboration, and approaching work with clarity and purpose, and I continue to explore new tools and concepts to grow both technically and creatively.</p>
-					</div>
-				</div>
+			<div class="row text-center">
+				<h2 class="bold">About</h2>
 			</div>
-
-			<div class="row" style="margin-top:50px;">
-				<div class="col-md-4 animate-box">
-					<h3>Technical Skills</h3>
-					<ul>
-						<li>Java, Python, SQL, HTML, CSS</li>
-						<li>Spring Boot, Django, OOP, OS DBMS</li>
-						<li>MySQL, PostgreSQL</li>
-						<li>React, Angular (Basics)</li>
-						<li>REST APIs & Microservices</li>
-					</ul>
-				</div>
-				<div class="col-md-4 animate-box">
-					<h3>Soft Skills</h3>
-					<ul>
-						<li>Leadership & Team Collaboration</li>
-						<li>Effective Communication</li>
-						<li>Problem Solving & Critical Thinking</li>
-						<li>Adaptability & Time Management</li>
-						<li>Project Coordination</li>
-					</ul>
-				</div>
-				<div class="col-md-4 animate-box">
-					<h3>Hobbies & Interests</h3>
-					<ul>
-						<li>Motorcycling & Road Trips</li>
-						<li>Fitness & Running</li>
-						<li>Photography</li>
-					</ul>
-				</div>
-			</div>
-
 			<div class="row">
-				<div class="col-md-12 animate-box"> <h3>Leadership & Experience</h3>
-					<ul>
-						<li>Logistics & Function Execution Head - VIT Pune Model United Nations (2023–2024)
-							<ul style="padding-left: 20px; margin-top: 10px;"> <li style="font-size: 0.95em;">Led 10 member team for event management and logistics handling.</li>
-							</ul>
-						</li>
-					</ul>
+				<div class="col-md-5 animate-box">
+					<div class="owl-carousel3">
+						<div class="item">
+							<img class="img-responsive about-img" src="images/about.jpg" alt="html5 bootstrap template by colorlib.com">
+						</div>
+						<div class="item">
+							<img class="img-responsive about-img" src="images/about-2.jpg" alt="html5 bootstrap template by colorlib.com">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-md-push-1 animate-box">
+					<div class="about-desc">
+						<div class="owl-carousel3">
+							<div class="item">
+								<h2><span>Varad Jumbad</span></h2>
+							</div>
+							<div class="item">
+								<h2><span>I'm</span><span>An Aspiring Developer</span></h2>
+							</div>
+						</div>
+						<div class="desc">
+
+							<p>A <a href="#">Computer Engineering</a> student with a strong interest in software development and practical problem-solving. I enjoy building systems that are structured, reliable, and meaningful in real use. Over time, I’ve developed skills in areas such as backend development, databases, and full-stack application design, while consistently improving my understanding of how technology can create real-world impact. I value learning, collaboration, and approaching work with clarity and purpose, and I continue to explore new tools and concepts to grow both technically and creatively.</p>
+							<p class="colorlib-social-icons">
+
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="colorlib-services">
-		<div class="container">
 
-			<div class="section-heading-container">
-				<h2 class="bold">Projects</h2>
+	<div id="colorlib-work">
+		<div class="container">
+			<div class="row text-center">
+				<h2 class="bold">Works</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+					<span>Portfolio</span>
+					<h2>Done Projects</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="rotate">
+						<h2 class="heading">Portfolio</h2>
+					</div>
+				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<div class="services-flex">
-						<div class="one-third">
-							<div class="row">
-								<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-									<span>Technical</span>
-									<h2>Projects</h2>
-									<p>Here are some of the projects I’ve worked on, focusing on building practical and well-structured solutions. Each project reflects my approach to problem-solving, learning, and continuous improvement.</p>
+					<div class="work-entry animate-box">
+						<a href="project-pmc.html" class="work-img" style="background-image: url(images/work-1.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>Pune Municipal Corporation – Complaint Data Analysis (Industry Project)</h2>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="rotate">
-										<h2 class="heading"></h2>
-									</div>
-								</div>
-								<div class="col-md-12">
-
-									<a href="project-pmc.html" class="project-link-card">
-										<div class="services animate-box">
-											<h3>1 - Pune Municipal Corporation – Complaint Data Analysis (Industry Project)</h3>
-											<p><strong>Tech / Role: Project Lead | Data Analysis | 2025</strong></p>
-											<p>Analyzed multi-year civic complaint data to uncover trends, inefficiencies, and escalation patterns. Proposed an ML-driven workflow for automatic complaint categorization and routing to improve response efficiency.</p>
-										</div>
-									</a>
-
-									<a href="project-finvault.html" class="project-link-card">
-										<div class="services animate-box">
-											<h3>2 - FinVault – Secure Role-Based Online Banking Simulator</h3>
-											<p><strong>Tech Stack: Java, Spring Boot, MySQL, JWT | 2024</strong></p>
-											<p>Developed a full-stack banking platform with login, account creation, transaction tracking, and secure authentication. Focused on proper data validation, session handling, and backend reliability.</p>
-										</div>
-									</a>
-
-									<a href="project-stegashield.html" class="project-link-card">
-										<div class="services animate-box">
-											<h3>3 - StegaShield – PDF Steganography & Digital Signature Toolkit</h3>
-											<p><strong>Tech Stack: Python, Streamlit, PyMuPDF, PyPDF2, ReportLab, Cryptography | 2025</strong></p>
-											<p>Built a toolkit to securely hide/extract messages and files in PDFs while supporting RSA-2048 signing and SHA-256 verification. Ensures tamper detection and document authenticity for secure file sharing.</p>
-										</div>
-									</a>
-
-									<a href="project-firesentinel.html" class="project-link-card">
-										<div class="services animate-box">
-											<h3>4 - FireSentinel – YOLOv8-Based Wildfire Early Warning System</h3>
-											<p><strong>Tech Stack: Python, YOLOv8, OpenCV, NumPy | 2024</strong></p>
-											<p>Trained a custom YOLOv8 model to detect fire and smoke in surveillance and aerial footage. Designed for early warning situations where rapid detection significantly reduces damage and response time.</p>
-										</div>
-									</a>
-
-								</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech/Role: Project Lead | Data Analysis | 2025</strong></p>
+								<p>Analyzed multi-year civic complaint data to identify key patterns, inefficiencies, and data gaps; proposed an ML-driven pipeline for automated complaint categorization and routing.</p>
+								<p class="read"><a href="project-pmc.html">View details</a></p>
 							</div>
 						</div>
-						<div class="one-forth services-img" style="background-image: url(images/services-img-1.jpg);">
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-finvault.html" class="work-img" style="background-image: url(images/work-2.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>FinVault – Secure Role-Based Online Banking Simulator</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech: Java, Spring Boot, MySQL, JWT | 2024</strong></p>
+								<p>Full-stack banking simulation with login/registration, account management, and transactions using JWT-based authentication and a normalized relational schema.</p>
+								<p class="read"><a href="project-finvault.html">View details</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-stegashield.html" class="work-img" style="background-image: url(images/work-3.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>StegaShield – PDF Steganography & Digital Signature Toolkit</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech: Python, Streamlit, PyMuPDF, PyPDF2, ReportLab, Cryptography | 2025</strong></p>
+								<p>Hide/extract messages and files in PDFs via metadata/annotations; add RSA-2048 signing and SHA-256 verification for tamper detection.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="work-entry animate-box">
+						<a href="project-firesentinel.html" class="work-img" style="background-image: url(images/work-4.jpg);">
+							<div class="display-t">
+								<div class="work-name">
+									<h2>FireSentinel – YOLOv8-Based Wildfire Early Warning System</h2>
+								</div>
+							</div>
+						</a>
+						<div class="col-md-4 col-md-offset-4">
+							<div class="desc">
+								<p><strong>Tech: Python, YOLOv8, OpenCV, NumPy | 2024</strong></p>
+								<p>Custom YOLOv8 model for real-time fire/smoke detection across aerial and surveillance footage, optimized for low-latency inference.</p>
+								<p class="read"><a href="project-firesentinel.html">View details</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div id="colorlib-testimony">
 		<div class="container">
-
-			<div class="section-heading-container">
+			<div class="row text-center">
 				<h2 class="bold">Achievements</h2>
 			</div>
-
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
-					<span>Highlights</span>
-					<h2>Achievements</h2>
+					<span>Achievements</span>
+					<h2>Highlights</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -836,8 +609,7 @@
 						<div class="col-md-12 text-center">
 							<div class="testimony">
 								<blockquote>
-									<p>Published research paper titled <strong>"Forest Fire and Smoke Detection Using ML Algorithm"</strong> presented at the
-										<strong>5th ICDICI 2024</strong>, now indexed on <strong>IEEE Xplore</strong>.</p>
+									<p>Published research paper titled <strong>"Forest Fire and Smoke Detection Using ML Algorithm"</strong> presented at the <strong>5th ICDICI 2024</strong>, now indexed on <strong>IEEE Xplore</strong>.</p>
 									<span>&mdash; 2024</span>
 								</blockquote>
 							</div>
@@ -868,11 +640,8 @@
 
 				</div>
 			</div>
-
 		</div>
 	</div>
-
-
 	<footer>
 		<div id="footer">
 			<div class="container">
@@ -880,31 +649,34 @@
 
 					<div class="col-md-6 col-pb-sm">
 						<h2>Let's Connect</h2>
-						<p>Feel free to reach out for collaboration, projects, or conversations.</p>
+						<p>Feel to reach out for collaboration, projects, or conversations.</p>
 						<p><strong>Email:</strong> <a href="mailto:varadjumbad15@gmail.com">varadjumbad15@gmail.com</a></p>
 					</div>
 
 					<div class="col-md-6 col-pb-sm">
 						<h2>Profiles</h2>
 						<p class="colorlib-social-icons">
-							<a href="https://linkedin.com/in/varad-jumbad-a02b57256" target="_blank"><i class="icon-linkedin2"></i> LinkedIn</a>
-							<a href="https://github.com/varad15" target="_blank"><i class="icon-github"></i> GitHub</a>
-							<a href="https://leetcode.com/u/varadjumbad15/" target="_blank"><i class="icon-code"></i> LeetCode</a>
+							<a href="https://linkedin.com/in/varad-jumbad-a02b57256" target="_blank"><i class="icon-linkedin2"></i> LinkedIn</a><br>
+							<a href="https://github.com/varad15" target="_blank"><i class="icon-github"></i> GitHub</a><br>
+							<a href="https://leetcode.com/u/varadjumbad15/" target="_blank"><i class="icon-code"></i> LeetCode</a><br>
+
 						</p>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<p>
-							&copy; Copyright &copy;<script>document.write(new.getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart4" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-						</p>
-					</div>
+
 				</div>
 			</div>
 		</div>
-	</footer>
 
-	<a href="#" id="back-to-top" class="back-to-top-btn"><i class="icon-arrow-up"></i></a>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p>
+					&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart4" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				</p>
+			</div>
+		</div>
+</div>
+</div>
+</footer>
 
 </div>
 
@@ -917,24 +689,6 @@
 <script src="js/magnific-popup-options.js"></script>
 
 <script src="js/main.js"></script>
-
-<script>
-$(document).ready(function(){
-    // Show/hide button on scroll
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 300) { // Show after scrolling 300px
-            $('#back-to-top').fadeIn();
-        } else {
-            $('#back-to-top').fadeOut();
-        }
-    });
-    // Animate scroll to top
-    $('#back-to-top').click(function(){
-        $('html, body').animate({scrollTop : 0}, 800); // 800ms scroll speed
-        return false;
-    });
-});
-</script>
 
 </body>
 </html>
